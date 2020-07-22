@@ -3,3 +3,6 @@ dist
 npm-debug.log
 build
 .vscode
+.nvmrc
+/login.js
+/login.json
