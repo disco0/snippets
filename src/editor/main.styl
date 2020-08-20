@@ -1,0 +1,189 @@
+/**
+ * Stylus rewrite of main.css
+ * - Intialized with Stylus' convert from css command
+ * TODO: Restore configurable values (font-size, etc) and generally unhardcode
+ *       everything once the rewrite and restyling is up and running with
+ *       no issues.
+ */
+
+$color-1 = #F3F3F3
+$color-2 = #D8D8D8
+$color-3 = #FFFFFF
+$color-4 = #4C6FFC
+$color-5 = #A3B5FF
+$color-6 = #FC4C4C
+$color-7 = #FF7C7C
+$color-8 = #00000020
+$color-9 = #DEDEDE
+
+/**
+ * Font configuration overrides
+ *
+ * Should be able to swap out hardcoded values with extension options interface?
+ */
+EditorFont()
+  font-size:   0.875em
+  font-family: Iosevka Extended, Iosevka Expanded, Iosevka, SemanticHaskell, SemanticJavascript, SemanticCode, Hasklig, monospace
+
+body
+  MapFont $Editor
+  margin: 0
+
+.home
+  display: flex
+
+.home header
+  display: flex
+  justify-content: flex-end
+  padding: 0 10px
+  background: #f3f3f3
+
+.none-selected
+  text-align: center
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.none-selected img
+  height: 100px
+
+.editor-container
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+
+div.ace_editor
+  flex-grow: 1
+  overflow: hidden
+  EditorFont()
+  /*    font: 12px/normal SemanticCode, 'IosevkaBrew', 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace; */
+
+.sidepane
+  width: 12%
+  min-width: 200px
+  height: 100vh
+  background-color: #f3f3f3
+  display: flex
+  flex-direction: column
+
+.sidepane .selected
+  background: lightgray
+  cursor: default
+
+.sidepane .menu-icon
+  visibility: hidden
+  transition: visibility 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+
+.sidepane li:hover .menu-icon,
+.sidepane .selected + div .menu-icon
+  visibility: visible
+
+.snippet-list
+  margin-top: 10px
+  flex-grow: 1
+  overflow: auto
+
+.snippet-row
+  background-color: transparent
+  padding: 10px
+  font-size: 1.2em
+  margin-left: 20px
+  cursor: pointer
+  transition: background-color 0.2s
+
+.snippet-row.selected
+  background-color: #d8d8d8
+  cursor: default
+  border-radius: 0 0 2px 2px
+
+.snippet-row:not(.selected):hover
+  background-color: #ffffff
+
+.sidepane input
+  width: 100%
+
+button.create
+  background-color: #4c6ffc
+  color: white
+  padding: 10px 20px
+  margin: 10px auto
+  outline: none
+  border: none
+  border-radius: 4px
+  display: block
+  cursor: pointer
+  transition: background-color 0.2s
+
+button.create:hover
+  background-color: #a3b5ff
+
+button.delete
+  background-color: #fc4c4c
+  color: white
+  padding: 5px 15px
+  margin: 10px auto
+  outline: none
+  border: none
+  border-radius: 4px
+  display: block
+  cursor: pointer
+  transition: background-color 0.2s
+
+button.delete:hover
+  background-color: #ff7c7c
+
+.save-error
+  color: red
+  text-decoration: none
+
+.error
+  margin: 50px auto
+  max-width: 600px
+  font-family: sans-serif
+  font-size: 1.5em
+  text-align: center
+
+.error h1,
+.error p,
+.error pre,
+.error a
+  text-align: center
+
+.error pre
+  width: 100%
+  color: red
+  white-space: pre-wrap
+
+.error h1
+  margin: 10px 0 0
+
+.error a
+  margin-top: 20px
+
+.error .action,
+.error a
+  font-size: 0.7em
+  display: block
+
+
+.snippet-list > li > div:first-child
+  padding-top: 2px
+  padding-bottom: 2px
+  padding-left: 7px
+  /* min-width: auto; */
+  /* white-space: nowrap; */
+  /* overflow-wrap: anywhere; */
+  box-shadow: 0 0 1px 0 #0002
+
+;
+
+.sidepane > *:last-child
+  padding: 5px !important
+  margin: 2px 3px
+  background: #DEDEDE
+
+.snippet-list > li span
+  font-size: 90% !important
+

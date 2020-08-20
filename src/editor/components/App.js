@@ -11,8 +11,8 @@ import SelectGist from "./SelectGist";
 import Welcome from "./Welcome";
 
 import "typeface-roboto";
-import "../main.css";
-import "../settings.css";
+import "../main.styl";
+import "../settings.styl";
 
 const previousSnippetName = (snippet, snippets) => {
   const sorted = Object.keys(snippets)
