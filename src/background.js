@@ -1,4 +1,3 @@
-/* global chrome */
 import * as R from "ramda";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
@@ -9,7 +8,7 @@ import errorMiddleware from "./editor/middleware/log-error";
 import { defaultState as defaultSettings } from "./editor/reducers/settings";
 import rootReducer from "./editor/reducers";
 import createAliases from "./editor/aliases";
-import Octokit from "@octokit/rest";
+import {Octokit} from "@octokit/rest"
 
 const chromeSyncStorageGet = () =>
   new Promise(resolve => {

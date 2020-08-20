@@ -1,5 +1,3 @@
-/* global localStorage */
-
 /* This file starts the editor to allow for interface development in a
    regular webpage. It simulates panel.js (start editor) and background.js
    (redux store)
@@ -17,7 +15,7 @@ import settingsMiddleware from "./editor/middleware/settings";
 import saveMiddleware from "./editor/middleware/save-when-inactive";
 import errorMiddleware from "./editor/middleware/log-error";
 import createAliases from "./editor/aliases";
-import Octokit from "@octokit/rest";
+import { Octokit } from "@octokit/rest";
 
 const LOCAL_STORAGE_PREFIX = "snippets-settings:";
 

@@ -17,6 +17,7 @@ import Editor from "./Editor";
 import Loading from "./Loading";
 import ErrorPage from "./ErrorPage";
 
+//@ts-expect-error
 import logo from "../../../images/logo-transparent.png";
 
 const saveStatus = {
