@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "noEmit": true,
+        "allowJs": false,
+        "allowUmdGlobalAccess": true,
+        "checkJs": false,
+        "rootDir": "./src/",
+        "typeRoots": [
+          "./node_modules/types"
+        ],
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+    },
+    "typeAcquisition": {
+        "enable": true
+    },
+    "include": [
+      "./src"
+    ],
+    "exclude": [
+      "./build"
+    ]
+}
