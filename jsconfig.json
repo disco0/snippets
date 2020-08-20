@@ -1,0 +1,19 @@
+{
+  "include": [
+    "./webpack.config.js",
+    "./index.d.ts",
+    "login.js"
+  ],
+  "compilerOptions": {
+    "noEmit": true,
+    "checkJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "module": "es2020",
+    "target": "es2020",
+    "allowUmdGlobalAccess": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "./"
+  }
+}
